@@ -7,16 +7,14 @@ the talk is given.
 Talks
 ========
 
-* **2015 October 12**:
+* **2016 February 02**: See the `2016-02-02-raboud` directory for slides.
 
-  I spoke about Tor's circuits, path selection, and hidden services, (and the
-  basics of the cryptography for those things) at a women's-only `event held at
-  ThoughtWorks' Werkstatt Berlin
-  <http://www.meetup.com/de/ThoughtWorks-Technology-Radar-Briefing-Berlin/events/226058216/>`_
-  space. (It was neither my choice nor my preference to restrict attendance by
-  sex.  It was also unclear to me if their definition of "women" meant "born
-  female," as I suspect, or if they hopefully meant some more inclusive
-  definition such as "anyone who isn't a cis-gendered male.")
+  Talk given to graduate students, researchers, and faculty of the Digital
+  Security group at the `Institute for Computing and Information Sciences
+  <http://www.ru.nl/icis/>`_ at `Raboud Unversiteit <ru.nl>`_ in Nijmegen, the
+  Netherlands, concerning my work with `The Tor Project
+  <https://www.torproject.org>`_ on protecting Tor bridges from discovery by
+  nation-state adversaries.
 
 * **2015 December 11**: See the `2015-12-11-eipsi` directory for slides.
 
@@ -29,11 +27,13 @@ Talks
   Netherlands, about the cryptography for my current work on using pairing-based
   anonymous credential schemes for social distribution of Tor bridge relays.
 
-* **2016 February 02**: See the `2016-02-02-raboud` directory for slides.
+* **2015 October 12**:
 
-  Talk given to graduate students, researchers, and faculty of the Digital
-  Security group at the `Institute for Computing and Information Sciences
-  <http://www.ru.nl/icis/>`_ at `Raboud Unversiteit <ru.nl>`_ in Nijmegen, the
-  Netherlands, concerning my work with `The Tor Project
-  <https://www.torproject.org>`_ on protecting Tor bridges from discovery by
-  nation-state adversaries.
+  I spoke about Tor's circuits, path selection, and hidden services, (and the
+  basics of the cryptography for those things) at a women's-only `event held at
+  ThoughtWorks' Werkstatt Berlin
+  <http://www.meetup.com/de/ThoughtWorks-Technology-Radar-Briefing-Berlin/events/226058216/>`_
+  space. (It was neither my choice nor my preference to restrict attendance by
+  sex.  It was also unclear to me if their definition of "women" meant "born
+  female," as I suspect, or if they hopefully meant some more inclusive
+  definition such as "anyone who isn't a cis-gendered male.")
