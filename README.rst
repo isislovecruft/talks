@@ -7,6 +7,13 @@ the talk is given.
 Talks
 ========
 
+* **2016 March 21**: See the `2016-03-21-raboud` directory for slides.
+
+  Guest lecture on the history and current status of mixnets, anonymity
+  networks, and anonymous communcations systems, given at `Raboud Unversiteit
+  <ru.nl>`_ in Nijmegen to students following the `TRU/e Computer Security
+  Master's Programme <https://www.true-security.nl/>`_.
+
 * **2016 February 02**: See the `2016-02-02-raboud` directory for slides.
 
   Talk given to graduate students, researchers, and faculty of the Digital

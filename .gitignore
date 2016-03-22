@@ -4,6 +4,9 @@
 *~
 *.swp
 
+# Libreoffice lock files
+.~*
+
 # Git mergetool backups and save files
 *.orig
 *.bak

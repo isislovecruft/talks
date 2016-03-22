@@ -1,0 +1,89 @@
+\newdimen\beamer@boxwidth
+\newdimen\beamer@headheight
+\newdimen\beamer@footheight
+\newdimen\beamer@maxpagewidth
+\usebeamerfont{frametitle}
+\beamer@headheight=1.4\baselineskip
+\beamer@footheight=.5\beamer@headheight
+
+\beamer@footheight=\beamer@headheight
+\DeclareOptionBeamer{height}{\beamer@headheight=#1}
+\ProcessOptionsBeamer
+
+\setbeamercolor{background in foot}{parent=background}
+\setbeamercolor{pagenumber in head/foot}{use=normal text}
+
+\def\logo{\setbeamertemplate{logo}}
+\def\insertlogo{\usebeamertemplate*{logo}}
+
+\def\conference{\setbeamertemplate{conference}}
+\def\insertconference{\usebeamertemplate*{conference}}
+
+\def\slidecaption{\setbeamertemplate{slidecaption}}
+\def\insertslidecaption{\usebeamertemplate*{slidecaption}}
+
+\def\jointwork{\setbeamertemplate{jointwork}}
+\def\insertjointwork{Joint work with \usebeamertemplate*{jointwork}}
+
+\mode
+<all>
+
+
+% Die Darstellung von Frametitle und Framesubtitle:
+\defbeamertemplate*{frametitle}{MYplain theme}
+{%
+	\nointerlineskip%
+	\vskip-\beamer@headheight%
+	\vbox to \beamer@headheight{%
+		\vfill
+		\leftskip=-\beamer@leftmargin%
+		\advance\leftskip by0.3cm%
+		\rightskip=-\beamer@rightmargin%
+		\advance\rightskip by0.3cm plus1fil%
+		\vspace*{0.55cm}
+		{\usebeamercolor[fg]{frametitle}\usebeamerfont{frametitle}\insertframetitle\par}%
+		{\usebeamercolor[fg]{framesubtitle}\usebeamerfont{framesubtitle}\insertframesubtitle\par}%
+	}%
+}
+
+% Die Headline mit Frametitle (s.o.) und Logo:
+\defbeamertemplate*{headline}{MYplain theme}
+{%
+	\settowidth{\beamer@boxwidth}{\resizebox{!}{\beamer@headheight}{\insertlogo}}%
+	% Der Frametitle:
+	\begin{beamercolorbox}{frametitle}
+%	\begin{beamercolorbox}[width=\paperwidth]{frametitle}
+		\usebeamercolor[bg]{MYplain}%
+		\hskip\paperwidth%
+		\hskip-\beamer@boxwidth%
+		\vrule width\beamer@boxwidth height \beamer@headheight%
+		\hskip-\beamer@boxwidth%
+		% Wenn Die Option nologo gesetzt ist, dann binde kein Logo ein
+		\ifbeamer@nologo
+		\else
+		% ...ansonsten verwende den Befehl \insertlogo:
+		\hbox to \beamer@boxwidth{\hss\vbox to
+		\beamer@headheight{\vss\hbox{\vspace*{-0.3cm}\hspace*{-0.1cm}\color{fg}\resizebox{!}{\beamer@headheight}{\insertlogo}}\vss}\hss}%
+		\fi
+	\end{beamercolorbox}
+}
+
+% Die Sidebar ist leer:
+\setbeamertemplate{sidebar right}
+{
+}
+
+
+% Definition der Footline mit Autor, Titel und Seitenzahl:
+\defbeamertemplate*{footline}{MYplain theme}
+{
+	\hspace{\fill}
+	\tiny{
+		%\insertauthor\ --
+		%	\insertshorttitle\hspace*{0.5cm}
+		\insertslidecaption\hspace*{0.5cm}
+		\insertframenumber\hspace*{0.1cm}
+	}
+	\vspace*{0.1cm}
+}
+

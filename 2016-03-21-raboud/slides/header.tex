@@ -1,0 +1,70 @@
+\documentclass[10pt]{beamer}
+%\documentclass[10pt,handout]{beamer}
+
+%\usepackage[T1]{CJKutf8}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+%\usepackage{graphicx}
+%\usepackage{rotating}
+%\usepackage{algpseudocode}
+
+\usepackage{listings}
+\usepackage{colortbl}
+
+\newcommand{\includetitlelogo}{\includegraphics[height=4cm]{titlelogo}}
+
+%\newcommand{\zht}[1]{\begin{CJK}{UTF8}{bsmi}#1\end{CJK}}
+\mode<presentation>
+
+\usepackage{xspace}
+
+\usepackage{xcolor}
+\hypersetup{urlcolor=blue,colorlinks=true}
+
+\usetheme[english,nologo]{MYplain}
+%\usetheme{default}
+%\usetheme[english,nologo]{MYplain}
+%\usetheme[english,nologo,notitlelogo]{MYplain}
+
+\include{macros}
+
+%\usepackage[normalem]{ulem}
+
+\slidecaption{\inserttitle$\quad$--$\quad$\insertsubtitle}
+
+\definecolor{LightCyan}{rgb}{0.88,1,1}
+\definecolor{LightRed}{rgb}{1,0.88,0.88}
+\newcommand{\LCC}{\cellcolor{LightCyan}}
+
+
+\usepackage{tikz}
+\usetikzlibrary{decorations.pathreplacing}
+\usetikzlibrary{shapes,patterns,trees,shadows}
+\usetikzlibrary{calc, backgrounds}
+
+\newcommand{\executeiffilenewer}[3]{%
+\ifnum\pdfstrcmp{\pdffilemoddate{#1}}%
+{\pdffilemoddate{#2}}>0%
+{\immediate\write18{#3}}\fi%
+}
+
+\newcommand{\includesvg}[2][width=\textwidth]{%
+\executeiffilenewer{#2.svg}{#2.pdf}%
+  {rsvg-convert -f pdf -o #2.pdf #2.svg}%
+\includegraphics[#1]{#2}%
+}
+
+\tikzset{
+  every overlay node/.style={
+    draw=black,fill=white,rounded corners,anchor=center,inner sep=1em
+  },
+}
+% Usage:
+% \tikzoverlay at (-1cm,-5cm) {content};
+% or
+% \tikzoverlay[text width=5cm] at (-1cm,-5cm) {content};
+\def\tikzoverlay{%
+   \tikz[baseline,overlay]\node[every overlay node]
+}%
+
+\def\opac{0.70}

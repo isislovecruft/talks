@@ -1,0 +1,46 @@
+\def\beamer@tilanggerman{german}
+\def\beamer@tilangenglish{english}
+
+\newif\ifbeamer@nologo
+\newif\ifbeamer@notitlelogo
+\newif\ifbeamer@noinst
+
+\beamer@nologofalse
+\beamer@notitlelogofalse
+
+% option tilang: changes language to english or german 
+\DeclareOptionBeamer{german}{\def\beamer@tilang{german}}
+\DeclareOptionBeamer{deutsch}{\def\beamer@tilang{german}}
+\DeclareOptionBeamer{english}{\def\beamer@tilang{english}}
+\DeclareOptionBeamer{nologo}{\beamer@nologotrue}
+\DeclareOptionBeamer{notitlelogo}{\beamer@notitlelogotrue}
+\DeclareOptionBeamer{noinst}{\beamer@noinsttrue}
+\ProcessOptionsBeamer
+
+\mode<presentation>
+
+%\usefonttheme{default}
+\usefonttheme{professionalfonts}
+\usecolortheme{MYplain}
+\useinnertheme{MYplain}
+\useoutertheme{MYplain}
+
+% Keine Navigationsleise
+\setbeamertemplate{navigation symbols}{}
+
+\mode
+<all>
+
+\logo{\hspace{.1cm}\includegraphics{slidelogo}\hspace*{.3cm}}
+
+\ifbeamer@noinst
+
+\else
+    \ifx\beamer@tilang\beamer@tilanggerman
+        \institute[Radboud University, The Netherlands]%
+                  {Radboud University, The Netherlands}%
+    \else
+        \institute[Radboud University, The Netherlands]%
+                  {Radboud University, The Netherlands}%
+    \fi
+\fi

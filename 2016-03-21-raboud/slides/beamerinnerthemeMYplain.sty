@@ -1,0 +1,45 @@
+
+% Template für die Titelseite:
+\setbeamertemplate{title page}
+{%
+\begin{centering}
+	% Anzeige des Titels:
+	\begin{beamercolorbox}[sep=4pt,center]{title}
+		\usebeamerfont{title}\inserttitle\par%
+      		% Wenn kein subtitle da ist, dann binde auch keinen ein:
+		\ifx\insertsubtitle\@empty%
+		% ...ansonsten zeige auch den an:
+		\else%
+			\vskip0.25em%
+			{\usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\par}%
+		\fi%
+	\end{beamercolorbox}%
+	\vskip1em\par
+	% Anzeige des Autors:
+	\begin{beamercolorbox}[sep=4pt,center]{author}
+		\usebeamerfont{author}\insertauthor
+	\end{beamercolorbox}
+	% Anzeige des Instituts, abhängig davon, ob german oder english als Option gesetzt ist:
+	\begin{beamercolorbox}[sep=4pt,center]{institute}
+		\usebeamerfont{author}\insertinstitute\\
+        \ifbeamer@notitlelogo
+
+        \else
+		\vspace*{5mm}
+		\includegraphics[width=2cm]{titlelogo}
+        \fi
+	\end{beamercolorbox}
+	% Anzeige des Datums:
+%	\begin{beamercolorbox}[sep=2pt,center]{jointwork}
+%		\usebeamerfont{author}\insertjointwork
+%	\end{beamercolorbox}\vskip0.4em
+	\begin{beamercolorbox}[sep=8pt,center]{date}
+		\usebeamerfont{author}\insertdate
+	\end{beamercolorbox}\vskip0.1em
+	% Und Anzeige der Konferenz:
+	\begin{beamercolorbox}[sep=4pt,center]{conference}
+		\usebeamerfont{author}\insertconference
+	\end{beamercolorbox}\vskip0.5em
+\end{centering}
+}
+
