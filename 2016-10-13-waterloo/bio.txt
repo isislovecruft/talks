@@ -1,0 +1,5 @@
+Isis Agora Lovecruft has been a core developer for The Tor Project since 2010.
+Isis' current work includes protocols for distributing shared secrets in a
+censorship resistant manner, improvements to Tor's circuit-level cryptography,
+and contributing to the design and implementation of a new post-quantum hybrid
+handshake for Tor.

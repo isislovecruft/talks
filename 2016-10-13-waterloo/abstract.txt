@@ -1,0 +1,17 @@
+Title: Hacks and Improvement for Tor's Circuit-Layer Crypto
+
+Abstract: Since 2010, various nation state adversaries have been conducting
+active probing and enumeration attacks to attempt to collect all of Tor's
+bridges, the unpublished entrances to the Tor network which are used to
+circumvent online censorship.  Since then, an arms race to distribute the
+bridge addresses to honest clients without these adversaries obtaining them
+has ensued.  The proposed solution uses attribute-based credentials to record
+honest users' good behaviour (i.e. the bridges not being censored/blocked),
+which also serves to effectively lock censoring adversaries out of the
+distribution system.  Even with these measures being implemented, there are
+other schemes for discovering the locations of Tor bridges; these will be
+discussed, as well as a hack that can be done with Tor's circuit-layer
+cryptography to protect against it.  After that, I'll discuss a known tagging
+attack on Tor and a much-needed (and highly custom) authenticating encryption
+cipher to defend against it, as well as the design for a post-quantum hybrid
+Tor handshake I've been working on.
