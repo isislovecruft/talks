@@ -15,6 +15,8 @@ Talks
 
 * **2016 March 21**: See the `2016-03-21-raboud` directory for slides.
 
+  Video is available `on YouTube <https://www.youtube.com/watch?v=xGIE7KTJiBY>`_.
+
   Guest lecture on the history and current status of mixnets, anonymity
   networks, and anonymous communcations systems, given at `Raboud Unversiteit
   <ru.nl>`_ in Nijmegen to students following the `TRU/e Computer Security
