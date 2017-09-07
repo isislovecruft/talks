@@ -7,6 +7,16 @@ the talk is given.
 Talks
 ========
 
+* **2017 August 19**: See the `2017-08-19-rustconf` directory for slides.
+
+  Video is available `on YouTube <https://www.youtube.com/watch?v=tH_pdYyqK4o>`_
+  and `for download
+  <https://fyb.patternsinthevoid.net/talks/2017-08-19-rustconf-dalek.mp4>`_.
+
+  I spoke with `Henry de Valence <https://hdevalence.ca>`_ on our fast, safe,
+  pure-Rust elliptic curve cryptography library, `curve25519-dalek
+  <https://github.com/isislovecruft/curve25519-dalek>`_.
+
 * **2016 October 13**: See the `2016-10-13-waterloo` directory for slides.
 
   Guest lecture on challenges in Tor bridge distribution systems at `CrySP
