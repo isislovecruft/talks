@@ -7,6 +7,12 @@ the talk is given.
 Talks
 ========
 
+* **2016 October 13**: See the `2016-10-13-waterloo` directory for slides.
+
+  Guest lecture on challenges in Tor bridge distribution systems at `CrySP
+  <https://crysp.uwaterloo.ca/>`_ at the University of Waterloo, in Ontario,
+  Canada.
+
 * **2016 March 21**: See the `2016-03-21-raboud` directory for slides.
 
   Guest lecture on the history and current status of mixnets, anonymity
